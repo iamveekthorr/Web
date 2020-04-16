@@ -8,10 +8,33 @@
 
 body {
   font-size: 62.5%;
+  font-family: 'poppins',sans-serif;
   line-height: 1.6rem; }
 
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.sidebar {
+  background-color: #6F8039;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 10%;
+          flex: 0 0 10%; }
+
+.main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1; }
+
+.header {
+  font-family: "Sacramento", cursive; }
 
 /*# sourceMappingURL=main.css.map */

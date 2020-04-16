@@ -1,0 +1,22 @@
+.container{
+    display: flex;
+}
+.sidebar{
+    background-color: $color-primary;
+    flex: 0 0 10%;
+    
+}
+
+.main{
+
+
+    flex: 1;
+    // flex property to make the side bar move without
+    // making changes to the markup
+    order: -1;
+
+}
+
+.header{
+    font-family: $logo-font;
+}

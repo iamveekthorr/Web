@@ -1,3 +1,9 @@
+$logo-font: 'Sacramento', cursive;
+$color-primary:#6F8039;
+$body-primary:#F7F7F7;
+$text-primary:#707070;
+
+
 *,
 *::before,
 *::after{
@@ -9,9 +15,12 @@
 
 body{
     font-size: 62.5%; //1rem=10px
+    font-family: 'poppins',sans-serif;
     line-height: 1.6rem;
 }
 
 html{
     box-sizing: border-box;
 }
+
+
