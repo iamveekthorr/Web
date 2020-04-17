@@ -24,17 +24,174 @@ html {
   background-color: #6F8039;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 10%;
-          flex: 0 0 10%; }
+          flex: 0 0 10%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
 
-.main {
+.nav-container {
+  background-color: transparent;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  position: fixed;
+  -webkit-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out; }
+  .nav-container:hover .nav-icon::before, .nav-container:hover .nav-icon::after {
+    cursor: pointer;
+    width: 3rem; }
+
+.nav-icon {
+  position: absolute;
+  top: 2rem;
+  right: 0rem;
+  width: 3rem;
+  height: 3px;
+  display: inline-block;
+  background-color: white;
+  text-align: center;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out; }
+  .nav-icon::before, .nav-icon::after {
+    width: 2rem;
+    height: 3px;
+    background-color: white;
+    display: inherit; }
+  .nav-icon::before, .nav-icon::after {
+    content: "";
+    position: absolute;
+    right: 0; }
+  .nav-icon::before {
+    top: 0.8rem; }
+  .nav-icon::after {
+    top: -0.8rem; }
+  .nav-icon:hover ::before {
+    cursor: pointer; }
+
+.user {
+  margin-top: 7rem;
+  -ms-flex-item-align: center;
+      align-self: center;
+  position: relative;
+  text-align: center;
+  color: white;
+  font-size: 0.75rem;
+  padding: 0rem;
+  cursor: pointer; }
+  .user__photo {
+    border-radius: 50%;
+    height: 2.5rem;
+    width: 2.5rem;
+    -o-object-fit: cover;
+       object-fit: cover; }
+  .user__notification {
+    position: absolute;
+    right: 0rem;
+    bottom: 0.5rem;
+    background-color: red;
+    border-radius: 50%;
+    height: 1rem;
+    width: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+
+.content {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
-          order: -1; }
+          order: -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
 
 .header {
-  font-family: "Sacramento", cursive; }
+  background-image: url(../img/aerial-view-of-seashore-near-large-grey-rocks-853199.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top;
+  height: 80vh;
+  color: white;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 2rem;
+  padding-top: 2rem; }
+  .header__logo {
+    font-size: 1.5rem;
+    top: 1rem;
+    left: 1rem;
+    margin-bottom: 6rem; }
+  .header__caption {
+    top: 10rem;
+    left: 1rem;
+    text-transform: uppercase; }
+    .header__caption-1 {
+      display: block;
+      font-size: 2rem;
+      letter-spacing: 0.1rem; }
+    .header__caption-2 {
+      display: block;
+      font-weight: 400;
+      font-size: 1rem;
+      letter-spacing: 0.8rem; }
+  .header__text {
+    width: 30%;
+    font-size: 0.75rem;
+    top: 20rem;
+    left: 1rem;
+    line-height: 1.2rem;
+    padding-top: 1rem;
+    border-top: 3px solid white; }
+
+.icon {
+  height: 2rem;
+  width: 2rem;
+  fill: white; }
+
+.icon-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2rem 0; }
+
+.book {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1rem;
+  font-weight: 400; }
+  .book:not(:last-child) {
+    margin-right: 2.5rem; }
+  .book span {
+    margin-left: 0.5rem; }
 
 /*# sourceMappingURL=main.css.map */

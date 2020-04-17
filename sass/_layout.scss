@@ -1,22 +1,177 @@
-.container{
+.container {
+  display: flex;
+}
+.sidebar {
+  background-color: $color-primary;
+  flex: 0 0 10%;
+  align-items: center;
+  z-index: 100;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-container {
+  background-color: transparent;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  position: fixed;
+
+  transition: all 0.8s ease-in-out;
+
+  &:hover .nav-icon::before,
+  &:hover .nav-icon::after {
+    cursor: pointer;
+    width: 3rem;
+  }
+}
+
+.nav-icon {
+  position: absolute;
+  top: 2rem;
+  right: 0rem;
+  width: 3rem;
+  height: 3px;
+  display: inline-block;
+  background-color: white;
+  text-align: center;
+  transition: all 0.4s ease-in-out;
+  &::before,
+  &::after {
+    width: 2rem;
+    height: 3px;
+    background-color: white;
+    display: inherit;
+  }
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+  }
+
+  &::before {
+    top: 0.8rem;
+  }
+
+  &::after {
+    top: -0.8rem;
+  }
+
+  &:hover ::before {
+    cursor: pointer;
+  }
+}
+
+.user {
+  margin-top: 7rem;
+  align-self: center;
+  position: relative;
+  text-align: center;
+  color: white;
+  font-size: 0.75rem;
+  padding: 0rem;
+  cursor: pointer;
+  &__photo {
+    border-radius: 50%;
+    height: 2.5rem;
+    width: 2.5rem;
+    object-fit: cover;
+  }
+
+  &__notification {
+    position: absolute;
+    right: 0rem;
+    bottom: 0.5rem;
+    background-color: red;
+    border-radius: 50%;
+    height: 1rem;
+    width: 1rem;
+
     display: flex;
-}
-.sidebar{
-    background-color: $color-primary;
-    flex: 0 0 10%;
-    
+    justify-content: center;
+    align-items: center;
+  }
 }
 
-.main{
+.content {
+  flex: 1;
+  // flex property to make the side bar move without
+  // making changes to the markup
+  order: -1;
 
-
-    flex: 1;
-    // flex property to make the side bar move without
-    // making changes to the markup
-    order: -1;
-
+  display: flex;
+  flex-direction: column;
 }
 
-.header{
-    font-family: $logo-font;
+.header {
+  background-image: url(../img/aerial-view-of-seashore-near-large-grey-rocks-853199.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top;
+  height: 80vh;
+  color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-left: 2rem;
+  padding-top: 2rem;
+
+  &__logo {
+    font-size: 1.5rem;
+    top: 1rem;
+    left: 1rem;
+    margin-bottom: 6rem;
+  }
+
+  &__caption {
+    top: 10rem;
+    left: 1rem;
+    text-transform: uppercase;
+    &-1 {
+      display: block;
+      font-size: 2rem;
+      letter-spacing: 0.1rem;
+    }
+    &-2 {
+      display: block;
+      font-weight: 400;
+      font-size: 1rem;
+      letter-spacing: 0.8rem;
+    }
+  }
+
+  &__text {
+    width: 30%;
+    font-size: 0.75rem;
+    top: 20rem;
+    left: 1rem;
+    line-height: 1.2rem;
+    padding-top: 1rem;
+    border-top: 3px solid white;
+  }
+}
+
+.icon{
+  height: 2rem;
+  width: 2rem;
+  fill: white;
+}
+
+.icon-container{
+  display: flex;
+  margin: 2rem 0;
+}
+
+.book{
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 400;
+  &:not(:last-child){
+    margin-right: 2.5rem;}
+  span{
+    margin-left: 0.5rem;
+  }
 }
