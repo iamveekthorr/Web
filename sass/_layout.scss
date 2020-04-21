@@ -1,14 +1,23 @@
 .container {
   display: flex;
+  flex: 0 1 100%;
 }
 .sidebar {
   background-color: $color-primary;
-  flex: 0 0 10%;
-  align-items: center;
-  z-index: 100;
-
   display: flex;
+  justify-content: center;
+  flex: 0 0 10%;
+  z-index: 100;
+ 
+}
+
+.holder{ 
+  display: flex;
+  align-items: center;
   flex-direction: column;
+  margin-top: 2rem;
+  
+  position: fixed;
 }
 
 .nav-container {
@@ -16,10 +25,9 @@
   width: 3rem;
   height: 3rem;
   cursor: pointer;
-  position: fixed;
+  
   display: flex;
-  justify-content: center;
-  align-self: center;
+  align-items: center;
 
   transition: all 0.8s ease-in-out;
 
@@ -31,9 +39,7 @@
 }
 
 .nav-icon {
-  position: fixed;
-  top: 2rem;
-  right: 3.5rem;
+  position: absolute;
   width: 2rem;
   height: 3px;
   display: inline-block;
@@ -68,14 +74,14 @@
 }
 
 .user {
-  margin-top: 7rem;
   align-self: center;
-  position: relative;
   text-align: center;
   color: white;
   font-size: 0.75rem;
   padding: 0rem;
-  position: fixed;
+  position: relative;
+  display: inline-block;
+  z-index: 500;
   cursor: pointer;
   &__photo {
     border-radius: 50%;
@@ -100,7 +106,9 @@
 }
 
 .content {
-  flex: 1;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
   // flex property to make the side bar move without
   // making changes to the markup
   order: -1;
@@ -163,37 +171,10 @@
 .icon-container {
   display: flex;
   margin: 2rem 0;
-
-  .icon {
-    height: 2rem;
-    width: 2rem;
-    fill: white;
-    transform: scale(1);
-    transform: translate(0, 0);
-    transition: all 0.2s;
-
-    &:hover {
-      transform: scale(1.5);
-      transform: translate(5px, -5px);
-      cursor: pointer;
-    }
-  }
-  .book {
-    display: flex;
-    align-items: center;
-    font-size: 1rem;
-    font-weight: 400;
-    transform: translateX(0);
-    transition: all 0.4s;
-    &:not(:last-child) {
-      margin-right: 2.5rem;
-    }
-    span {
-      margin-left: 0.5rem;
-    }
-  }
+  align-items: center;
 }
 
+// Location and rating section
 .rating {
   height: 5rem;
   color: $color-primary;
@@ -240,37 +221,49 @@
     font-size: 3rem;
   }
 }
+//////End of loaction and rating section//////
 
+// section discover tours
 .tour-cards {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
-  height: 100vh;
   position: relative;
-  .title {
-    text-transform: uppercase;
-    color: $color-primary;
-    font-size: 2rem;
-    font-weight: 300;
-    margin-bottom: 3rem;
-    margin-left: 2.5rem;
-  }
 }
 
+// main container for cards
 .card-container {
   display: flex;
 }
 
+// card class
 .card {
   perspective: 150rem;
-  height: 25rem;
+  height: 30rem;
   justify-content: center;
   display: flex;
 
+  &-discription {
+    position: absolute;
+    bottom: 4rem;
+    left: 1.2rem;
+
+    font-size: 2rem;
+    font-weight: 400;
+
+    &__location {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 1.2rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+  }
+
+  // card sides
   &__side {
-    height: 25rem;
-    width: 15rem;
-    border-radius: 3px;
+    height: 30rem;
+    width: 20rem;
     box-shadow: 0 6px 10px rgba($color: #000000, $alpha: 0.5);
 
     color: white;
@@ -282,9 +275,12 @@
     left: 0;
     backface-visibility: hidden;
 
+    //front side of section card
     &--front {
       background-color: white;
+      position: relative;
 
+      //front of card 1
       &--1 {
         background-image: linear-gradient(
             to bottom,
@@ -292,35 +288,66 @@
           ),
           url("../img/card1.jpg");
         background-size: cover;
-        height: 25rem;
+        height: 30rem;
       }
+      // front of card 2
       &--2 {
         background-image: linear-gradient(
-          to bottom,
-          rgba($color: #000, $alpha: 0.3)
-        ),
-        url("../img/card2.jpg");
+            to bottom,
+            rgba($color: #000, $alpha: 0.3)
+          ),
+          url("../img/card2.jpg");
 
         background-size: cover;
-        height: 25rem;
+        height: 30rem;
       }
+
+      // front of card 3
       &--3 {
         background-image: linear-gradient(
-          to bottom,
-          rgba($color: #000, $alpha: 0.3)
-        ),
-        url("../img/card3.jpg");
+            to bottom,
+            rgba($color: #000, $alpha: 0.3)
+          ),
+          url("../img/card3.jpg");
 
         background-size: cover;
-        height: 25rem;
+        height: 30rem;
       }
     }
 
+    // card back
     &--back {
       background-color: green;
       transform: rotateY(180deg);
-      
+
       position: absolute;
+
+      display: flex;
+      flex-direction: column;
+
+      padding: 2rem;
+
+      &--1 {
+        background-image: linear-gradient(to bottom, #e95671, #475390);
+
+        background-size: cover;
+        height: 30rem;
+      }
+      // front of card 2
+      &--2 {
+        background-image: linear-gradient(to bottom, #3295b0, #46b6d3);
+
+        background-size: cover;
+        height: 30rem;
+      }
+
+      // front of card 3
+      &--3 {
+        background-image: linear-gradient(to bottom, #549e78, #6f8039);
+
+        background-size: cover;
+        height: 30rem;
+      }
     }
   }
 
@@ -332,4 +359,9 @@
     cursor: pointer;
     transform: rotateY(0deg);
   }
+}
+
+.explore{
+  display: flex;
+  flex-direction: column;
 }
