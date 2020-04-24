@@ -1,22 +1,21 @@
 .container {
   display: flex;
-  flex: 0 1 100%;
 }
+
 .sidebar {
   background-color: $color-primary;
   display: flex;
   justify-content: center;
   flex: 0 0 10%;
   z-index: 100;
- 
 }
 
-.holder{ 
+.holder {
   display: flex;
   align-items: center;
   flex-direction: column;
   margin-top: 2rem;
-  
+
   position: fixed;
 }
 
@@ -25,7 +24,7 @@
   width: 3rem;
   height: 3rem;
   cursor: pointer;
-  
+
   display: flex;
   align-items: center;
 
@@ -106,15 +105,10 @@
 }
 
 .content {
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
+  flex: 1;
   // flex property to make the side bar move without
   // making changes to the markup
   order: -1;
-
-  // test
-  // max-width: 90vw;
 
   display: flex;
   flex-direction: column;
@@ -361,7 +355,73 @@
   }
 }
 
-.explore{
+.explore {
   display: flex;
   flex-direction: column;
+}
+
+.more-options {
+  display: flex;
+  margin-left: 2.5rem;
+}
+
+.icon__holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+
+  &--tags {
+    color: #6f8039;
+    font-size: 1rem;
+  }
+}
+
+
+.overview{
+  background-color:#F7F7F7;
+  font-size: 1rem;
+  color: #6f8039;
+  padding: 2rem;
+
+  display: flex;
+}
+
+.details{
+  flex:0 0 60%;  
+  padding: 1rem;
+
+  margin-right: 4rem;
+}
+
+.recommended{
+  font-size: 1rem;
+  color: currentColor;
+  margin-top: 1rem;
+  align-items: center;
+  display: flex;
+  &__count{
+    margin-right: auto;
+
+  }
+  &__photos{
+    height: 2.5rem;
+    width: 2.5rem;
+    object-fit: cover;
+    box-sizing: content-box;
+    border: 3px solid white;
+    border-radius: 50%;
+
+    &:not(:last-child){
+      margin-right: -1.5rem;
+    }
+  }
+}
+
+.booking__section{
+  padding: 15rem 0;
+  &__form{
+    background-image: url('../img/booking.jpg');
+  }
 }
