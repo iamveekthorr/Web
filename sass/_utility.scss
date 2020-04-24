@@ -11,6 +11,11 @@
 .u-margin-bottom-lg {
   margin-bottom: 8rem;
 }
+.u-margin-left-sm{
+  margin-left: 2.5rem;
+}
+
+
 
 .gen-icons {
   fill: #6f8039;
@@ -69,8 +74,6 @@
   color: #6f8039;
   font-size: 2rem;
   font-weight: 300;
-  margin-bottom: 3rem;
-  margin-left: 2.5rem;
 }
 
 .location-pin {
@@ -199,4 +202,62 @@
     align-self: flex-start;
 
   }
+}
+.remedy{margin-right: auto;}
+.footer{
+  color:#6f8039;
+  display: flex;
+  padding: 2rem 3rem ;
+
+  &-socials__box{
+    display: flex;
+    flex: 1;
+    
+    align-items: center;
+    & > *:not(:last-child){
+      margin-right: .75rem;
+    }
+  }
+  &-socials__icons{
+  fill: #6f8039;
+  height: 1.5rem;
+  width: 1.5rem;
+  }
+}
+
+.follow{
+  color: inherit;
+  font-size: 1rem;
+  letter-spacing: .2rem;
+  padding-top: .75rem;
+  padding-right: 10rem;
+  border-top: 2px solid rgba($color: #6f8039, $alpha: .9);
+}
+
+.logo-green{
+  color: inherit;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.piracy{
+  margin-top: 3rem;
+  flex: 0 0 30%;
+  padding-top: .5rem;
+  color: inherit;
+
+  &-statement{
+    font-weight: 500;
+    font-size: 1rem;
+    padding-bottom: .5rem;
+    border-bottom: 2px solid #6f8039;
+  }
+}
+
+.copyright{
+  text-align: center;
+  color: #6f8039;
+  font-size: .8rem;
+  margin: 2.5rem auto;
+  font-weight: 400;
 }

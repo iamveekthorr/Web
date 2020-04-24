@@ -420,8 +420,57 @@
 }
 
 .booking__section{
-  padding: 15rem 0;
-  &__form{
-    background-image: url('../img/booking.jpg');
-  }
+  background-image: linear-gradient(80deg, rgba($color:white, $alpha:.9)0%,
+  rgba($color:white, $alpha:.9)50%, transparent 50%),
+     url('../img/booking.jpg');
+  background-size: cover;
+  background-position: top;
+  
+  height: 30rem;
+  padding: 7rem 2rem;
+  
 }
+
+.form{
+  &-group{
+    margin-bottom: 2rem;
+
+  }
+
+  &-input{
+    font-size: 1rem;
+    font-family: poppins;
+    text-transform: uppercase;
+    padding: .75rem 1.5rem;
+    border: 2px solid rgba($color: #707070, $alpha: .5);
+    width: 40%;
+    border-radius: 3px;
+    background-color: transparent;
+    backface-visibility: hidden;
+
+
+    transition: all;
+
+    &::placeholder{
+      color: rgba($color: #707070, $alpha: .8);
+
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &:focus{
+      outline: #6f8039 solid 2px;
+      border: none;
+      color: rgba($color: #707070, $alpha: .8);
+
+    }
+    &:focus:invalid{
+      outline: #CC234E solid 2px;
+      border: none;
+      color: rgba($color: #707070, $alpha: .8);
+
+    }
+  }
+
+}
+
