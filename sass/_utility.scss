@@ -247,10 +247,15 @@
   color: inherit;
 
   &-statement{
-    font-weight: 500;
+    font-weight: 400;
     font-size: 1rem;
     padding-bottom: .5rem;
-    border-bottom: 2px solid #6f8039;
+    border-bottom: 2px solid rgba($color: #6f8039, $alpha: .5);
+  }
+
+  
+  @media only screen and (min-width: 75em){
+    font-size: .7rem;
   }
 }
 
@@ -260,4 +265,5 @@
   font-size: .8rem;
   margin: 2.5rem auto;
   font-weight: 400;
+
 }

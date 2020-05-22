@@ -8,6 +8,11 @@
   justify-content: center;
   flex: 0 0 10%;
   z-index: 100;
+
+  @media only screen and (max-width: $bp-largest){
+    display: flex;
+    flex: 0 0 10%;
+  }
 }
 
 .holder {
@@ -105,7 +110,7 @@
 }
 
 .content {
-  flex: 1;
+  flex: 1 0 90vh;
   // flex property to make the side bar move without
   // making changes to the markup
   order: -1;
@@ -159,6 +164,19 @@
     line-height: 1.2rem;
     padding-top: 1rem;
     border-top: 3px solid white;
+  }
+
+  
+  @media only screen and (min-width: $bp-Xlarge){
+    height: 90%;
+  }
+
+  @media only screen and (max-width: $bp-largest){
+    height: 80%;
+  }
+
+  @media only screen and (max-width: $bp-phone){
+    height: 100%;
   }
 }
 
@@ -236,6 +254,7 @@
   height: 30rem;
   justify-content: center;
   display: flex;
+  object-fit: contain;
 
   &-discription {
     position: absolute;
@@ -269,6 +288,10 @@
     left: 0;
     backface-visibility: hidden;
 
+    @media only screen and (max-width: $bp-phone){
+      margin-left: 2rem;
+    }
+
     //front side of section card
     &--front {
       background-color: white;
@@ -282,6 +305,7 @@
           ),
           url("../img/card1.jpg");
         background-size: cover;
+        object-fit: contain;
         height: 30rem;
       }
       // front of card 2
@@ -293,6 +317,7 @@
           url("../img/card2.jpg");
 
         background-size: cover;
+        object-fit: contain;
         height: 30rem;
       }
 
@@ -305,7 +330,9 @@
           url("../img/card3.jpg");
 
         background-size: cover;
+        object-fit: contain;
         height: 30rem;
+
       }
     }
 
@@ -325,13 +352,16 @@
         background-image: linear-gradient(to bottom, #e95671, #475390);
 
         background-size: cover;
+        object-fit: contain;
         height: 30rem;
+
       }
       // front of card 2
       &--2 {
         background-image: linear-gradient(to bottom, #3295b0, #46b6d3);
 
         background-size: cover;
+        object-fit: contain;
         height: 30rem;
       }
 
@@ -340,6 +370,7 @@
         background-image: linear-gradient(to bottom, #549e78, #6f8039);
 
         background-size: cover;
+        object-fit: contain;
         height: 30rem;
       }
     }

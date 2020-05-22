@@ -242,10 +242,13 @@
   padding-top: .5rem;
   color: inherit; }
   .piracy-statement {
-    font-weight: 500;
+    font-weight: 400;
     font-size: 1rem;
     padding-bottom: .5rem;
-    border-bottom: 2px solid #6f8039; }
+    border-bottom: 2px solid rgba(111, 128, 57, 0.5); }
+  @media only screen and (min-width: 75em) {
+    .piracy {
+      font-size: .7rem; } }
 
 .copyright {
   text-align: center;
@@ -263,14 +266,24 @@
           box-sizing: inherit; }
 
 body {
-  font-size: 62.5%;
   font-family: 'poppins',sans-serif;
   line-height: 1.6rem;
-  max-width: 100vw; }
+  max-width: 100vw;
+  scroll-behavior: smooth; }
 
 html {
+  font-size: 62.5%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
+  @media only screen and (min-width: 75em) {
+    html {
+      font-size: 100%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 70%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 50%; } }
 
 .container {
   display: -webkit-box;
@@ -289,6 +302,14 @@ html {
       -ms-flex: 0 0 10%;
           flex: 0 0 10%;
   z-index: 100; }
+  @media only screen and (max-width: 56.25em) {
+    .sidebar {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 10%;
+              flex: 0 0 10%; } }
 
 .holder {
   display: -webkit-box;
@@ -383,8 +404,8 @@ html {
 
 .content {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+      -ms-flex: 1 0 90vh;
+          flex: 1 0 90vh;
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
           order: -1;
@@ -439,6 +460,15 @@ html {
     line-height: 1.2rem;
     padding-top: 1rem;
     border-top: 3px solid white; }
+  @media only screen and (min-width: 75em) {
+    .header {
+      height: 90%; } }
+  @media only screen and (max-width: 56.25em) {
+    .header {
+      height: 80%; } }
+  @media only screen and (max-width: 37.5em) {
+    .header {
+      height: 100%; } }
 
 .icon-container {
   display: -webkit-box;
@@ -534,7 +564,9 @@ html {
           justify-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -o-object-fit: contain;
+     object-fit: contain; }
   .card-discription {
     position: absolute;
     bottom: 4rem;
@@ -562,6 +594,9 @@ html {
     left: 0;
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden; }
+    @media only screen and (max-width: 37.5em) {
+      .card__side {
+        margin-left: 2rem; } }
     .card__side--front {
       background-color: white;
       position: relative; }
@@ -569,16 +604,22 @@ html {
         background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3))), url("../img/card1.jpg");
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3)), url("../img/card1.jpg");
         background-size: cover;
+        -o-object-fit: contain;
+           object-fit: contain;
         height: 30rem; }
       .card__side--front--2 {
         background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3))), url("../img/card2.jpg");
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3)), url("../img/card2.jpg");
         background-size: cover;
+        -o-object-fit: contain;
+           object-fit: contain;
         height: 30rem; }
       .card__side--front--3 {
         background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3))), url("../img/card3.jpg");
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3)), url("../img/card3.jpg");
         background-size: cover;
+        -o-object-fit: contain;
+           object-fit: contain;
         height: 30rem; }
     .card__side--back {
       background-color: green;
@@ -597,16 +638,22 @@ html {
         background-image: -webkit-gradient(linear, left top, left bottom, from(#e95671), to(#475390));
         background-image: linear-gradient(to bottom, #e95671, #475390);
         background-size: cover;
+        -o-object-fit: contain;
+           object-fit: contain;
         height: 30rem; }
       .card__side--back--2 {
         background-image: -webkit-gradient(linear, left top, left bottom, from(#3295b0), to(#46b6d3));
         background-image: linear-gradient(to bottom, #3295b0, #46b6d3);
         background-size: cover;
+        -o-object-fit: contain;
+           object-fit: contain;
         height: 30rem; }
       .card__side--back--3 {
         background-image: -webkit-gradient(linear, left top, left bottom, from(#549e78), to(#6f8039));
         background-image: linear-gradient(to bottom, #549e78, #6f8039);
         background-size: cover;
+        -o-object-fit: contain;
+           object-fit: contain;
         height: 30rem; }
   .card:hover .card__side--front {
     -webkit-transform: rotateY(-180deg);
