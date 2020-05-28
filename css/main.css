@@ -266,7 +266,7 @@
           box-sizing: inherit; }
 
 body {
-  font-family: 'poppins',sans-serif;
+  font-family: "poppins", sans-serif;
   line-height: 1.6rem;
   max-width: 100vw;
   scroll-behavior: smooth; }
@@ -285,13 +285,14 @@ html {
     html {
       font-size: 50%; } }
 
+@use 'base';
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
 
 .sidebar {
-  background-color: #6F8039;
+  background-color: #6f8039;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -304,9 +305,7 @@ html {
   z-index: 100; }
   @media only screen and (max-width: 56.25em) {
     .sidebar {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
+      display: block;
       -webkit-box-flex: 0;
           -ms-flex: 0 0 10%;
               flex: 0 0 10%; } }
@@ -481,7 +480,7 @@ html {
 
 .rating {
   height: 5rem;
-  color: #6F8039;
+  color: #6f8039;
   text-transform: uppercase;
   margin-bottom: 5rem;
   background-color: rgba(112, 112, 112, 0.1);
@@ -510,7 +509,7 @@ html {
   .location-icon {
     height: 3rem;
     width: 3rem;
-    fill: #6F8039;
+    fill: #6f8039;
     -ms-flex-item-align: center;
         align-self: center;
     margin-right: 0.75rem; }
