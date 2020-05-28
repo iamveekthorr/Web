@@ -1,3 +1,5 @@
+@use 'base';
+
 // utility classes
 .u-margin-bottom-smt {
   margin-bottom: 1rem;
@@ -18,10 +20,10 @@
 
 
 .gen-icons {
-  fill: #6f8039;
+  fill: $color-primary;
   height: 2rem;
   width: 2rem;
-  border: 2px solid #6f8039;
+  border: 2px solid $color-primary;
 }
 
 .back-title {

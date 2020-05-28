@@ -1,4 +1,3 @@
-@import './utility';
-@import './button';
-@import './base';
-@import './layout';
+//import base file first 
+//before importing other files
+@import './base','./utility', './button', './layout';
