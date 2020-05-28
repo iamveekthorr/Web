@@ -57,14 +57,14 @@ html {
     font-size: 0.75rem; }
 
 .gen-icon__white {
-  fill: white;
+  fill: #f7f7f7;
   height: 2rem;
   width: 2rem; }
 
 .icon {
   height: 2rem;
   width: 2rem;
-  fill: white;
+  fill: #f7f7f7;
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
   -webkit-transition: all 0.2s;
@@ -99,7 +99,7 @@ html {
   font-weight: 300; }
 
 .location-pin {
-  fill: white;
+  fill: #f7f7f7;
   height: 1.2rem;
   width: 1.2rem; }
 
@@ -115,7 +115,7 @@ html {
   transition: all 0.4s; }
   .ex-icons:hover {
     background-color: #6f8039;
-    fill: white; }
+    fill: #f7f7f7; }
 
 .paragraph:not(:last-child) {
   margin-bottom: 2rem; }
@@ -348,13 +348,13 @@ html {
   height: 3px;
   display: inline-block;
   justify-self: center;
-  background-color: white;
+  background-color: #f7f7f7;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out; }
   .nav-icon::before, .nav-icon::after {
     width: 1.5rem;
     height: 3px;
-    background-color: white;
+    background-color: #f7f7f7;
     display: inherit; }
   .nav-icon::before, .nav-icon::after {
     content: "";
@@ -371,7 +371,7 @@ html {
   -ms-flex-item-align: center;
       align-self: center;
   text-align: center;
-  color: white;
+  color: #f7f7f7;
   font-size: 0.75rem;
   padding: 0rem;
   position: relative;
@@ -423,7 +423,7 @@ html {
   background-size: 100%;
   background-position: top;
   height: 80vh;
-  color: white;
+  color: #f7f7f7;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -459,7 +459,7 @@ html {
     left: 1rem;
     line-height: 1.2rem;
     padding-top: 1rem;
-    border-top: 3px solid white; }
+    border-top: 3px solid #f7f7f7; }
   @media only screen and (min-width: 75em) {
     .header {
       height: 90%; } }

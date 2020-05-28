@@ -38,7 +38,7 @@
 }
 
 .gen-icon__white {
-  fill: white;
+  fill: $body-primary;
   height: 2rem;
   width: 2rem;
 }
@@ -46,7 +46,7 @@
 .icon {
   height: 2rem;
   width: 2rem;
-  fill: white;
+  fill: $body-primary;
   transform: translate(0, 0);
   transition: all 0.2s;
 
@@ -79,7 +79,7 @@
 }
 
 .location-pin {
-  fill: white;
+  fill: $body-primary;
   height: 1.2rem;
   width: 1.2rem;
 }
@@ -87,16 +87,16 @@
 .ex-icons {
   height: 5rem;
   width: 5rem;
-  fill: #6f8039;
+  fill: $color-primary;
   padding: 0.5rem;
-  border: 2px solid #6f8039;
+  border: 2px solid $color-primary;
   border-radius: 3px;
   background-color: transparent;
   transition: all 0.4s;
 
   &:hover {
-    background-color: #6f8039;
-    fill: white;
+    background-color: $color-primary;
+    fill: $body-primary;
   }
 }
 
@@ -108,8 +108,8 @@
   margin: 0 0.75rem;
   list-style: none;
   font-size: inherit;
-  border-top: 2px solid rgba($color: #6f8039, $alpha: 0.5);
-  border-bottom: 2px solid rgba($color: #6f8039, $alpha: 0.5);
+  border-top: 2px solid rgba($color: $color-primary, $alpha: 0.5);
+  border-bottom: 2px solid rgba($color: $color-primary, $alpha: 0.5);
   padding: 2rem 0;
 
   display: flex;
@@ -125,7 +125,7 @@
   &__icons {
     height: 1rem;
     width: 1rem;
-    fill: #6f8039;
+    fill: $color-primary;
     align-self: center;
   }
 }
@@ -138,7 +138,7 @@
     padding: 1.2rem;
     height: 15rem;
     width: 20rem;
-    background-color: #f7f7f7;
+    background-color: $body-primary;
     box-shadow: 0 6px 10px rgba($color: #000000, $alpha: 0.3);
     position: relative;
     z-index: 1;
@@ -156,7 +156,7 @@
     left: -1rem;
     position: absolute;
     font-size: 20rem;
-    color: rgba($color: #707070, $alpha: 0.3);
+    color: rgba($color: $text-primary, $alpha: 0.3);
     font-family: poppins;
     z-index: -2;
   }
@@ -193,13 +193,13 @@
   &__user-title {
     display: inline-flex;
 
-    color: rgba($color: #6f8039, $alpha: 0.3);
+    color: rgba($color: $color-primary, $alpha: 0.3);
     line-height: .75rem;
     padding: .2rem .5rem;
     text-transform: uppercase;
     font-size: .75rem;
     box-sizing: content-box;
-    border: 1px solid rgba($color: #6f8039, $alpha: 0.2);
+    border: 1px solid rgba($color: $color-primary, $alpha: 0.2);
     border-radius: 2px;
     align-self: flex-start;
 
@@ -252,7 +252,7 @@
     font-weight: 400;
     font-size: 1rem;
     padding-bottom: .5rem;
-    border-bottom: 2px solid rgba($color: #6f8039, $alpha: .5);
+    border-bottom: 2px solid rgba($color: $color-primary, $alpha: .5);
   }
 
   

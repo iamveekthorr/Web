@@ -36,3 +36,8 @@ html {
     font-size: 50%;
   }
 }
+
+//i couldn't find a better name 
+@mixin flexing{
+  display: flex;
+}
